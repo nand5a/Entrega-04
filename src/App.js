@@ -51,7 +51,7 @@ function App() {
 
         <button onClick={handleAddCarro}> Adicionar Veículo</button>
 
-        <ListaCarros carros={carro}/>
+        <ListaCarros carro={carro}/>
       </div>  
 
       <div class="footer">
