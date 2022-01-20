@@ -17,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
   
 }
 
@@ -51,6 +52,7 @@
   width: 100%;
   outline: none;
   margin-left: 5px;
+  padding-left: 10px;
 }
 
 .top{

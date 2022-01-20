@@ -42,6 +42,8 @@ return (
 
         <div className='add-container'>
 
+            <h1 class="título"> Adicionar Veículo</h1>
+
             <div className='input-container'>        
                 <input class="inputVeiculos top" type="text" placeholder='Marca:' onChange={(e)=>setMarca(e.currentTarget.value)}/>
                 <input class="inputVeiculos" type="text" placeholder='Modelo:' onChange={(e)=>setModelo(e.currentTarget.value)}/>
@@ -58,6 +60,7 @@ return (
         </div> 
 
         <div>
+            <h1 class="título"> Veículos</h1>
             <ul class="lista">
                 {renderList}
             </ul>

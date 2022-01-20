@@ -1,6 +1,8 @@
 import React from 'react';
 import "./style.css";
 import logo from './assets/logo.jpeg';
+import flyer from './assets/flyer.jpeg';
+
 import ListaCarros from './Components/ListaCarros/ListaCarros.js';
 
 export default function App() {
@@ -18,7 +20,7 @@ export default function App() {
           <button class="menu item">Início</button>    
           <button class="menu item">Veículos</button>  
           <button class="menu item">Serviços</button>  
-          <button class="menu item">Adicionar Carro</button>            
+          <button class="menu item">Adicionar Veículo</button>            
         </div>    
 
         <div class="busca">
@@ -27,11 +29,29 @@ export default function App() {
             
       </div>   
 
+      <div class="promoção">
+        <img class="foto" src={flyer} alt="imagem" height={700}/>
+      </div> 
+
       <div class="lista">
         <ListaCarros/>
       </div> 
 
-  
+      <div class="outrosServiços">
+
+        <h1 class="título">NOSSOS SERVIÇOS</h1>
+
+        <div class="fileira1">
+          <button class="serviço">REVISÃO</button>    
+          <button class="serviço">PEÇAS</button> 
+        </div>
+        
+        <div class="fileira2">
+          <button class="serviço">ACESSÓRIOS</button>    
+          <button class="serviço">OUTRO SERVIÇO</button>
+        </div>
+        
+      </div>
 
       <div class="footer">
         <div class="bloco sobre">
