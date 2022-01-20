@@ -57,8 +57,8 @@ return (
             </button> 
         </div> 
 
-        <div class="lista">
-            <ul>
+        <div>
+            <ul class="lista">
                 {renderList}
             </ul>
         </div>

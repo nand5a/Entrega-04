@@ -11,7 +11,7 @@ export default function App() {
       <div id = "header">
 
         <div class="logo">
-          <img class="foto" src={logo} alt="imagem" height={60}/>  
+          <img class="foto" src={logo} alt="imagem" height={50}/>  
         </div>
 
         <div class="menu">

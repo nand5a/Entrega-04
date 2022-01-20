@@ -22,7 +22,7 @@ html{
 
 #header{
     background-color: #AF0000;
-    height: 2,5cm;
+    height: 1.5cm;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@ html{
 
 .logo{
     color: #fff;
-    height: 20%;
+    height: 80%;
     width: 10%;
 }
 
@@ -79,16 +79,6 @@ html{
 
 ::placeHolder{
     color: #fff
-}
-
-
-.button{
-    background-color: rgba(0, 0, 0, 0.397);
-    height: 50px;
-    width: 150px;
-    border: none;
-    border-radius: 10px;
-    
 }
 
 .footer{
