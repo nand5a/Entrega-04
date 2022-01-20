@@ -5,17 +5,61 @@ import React, {useState, useRef} from "react";
 import ListaCarros from './Components/ListaCarros/ListaCarros.js';
 
 function App() {
-  const [carro, setCarro] = useState([]);
-  const carroInfoRef = useRef();
+  const [marca, setMarca] = useState();
+  const [modelo, setModelo] = useState();
+  const [cor, setCor] = useState();
+  const [ano, setAno] = useState();
+  const [motor, setMotor] = useState();
+  const [estoque, setEstoque] = useState();
+  const [preço, setPreço] = useState();
 
-  function handleAddCarro() {
-    const infoCarro = carroInfoRef.current.value
-    if (infoCarro === "") return; 
-    setCarro((carrosAnteriores) => {
-      return [...carrosAnteriores, {id: 1, infoCarro: infoCarro}]
-    });
-    carroInfoRef.current.value = null;
+  const handleAddCarro=()=>{
+    const newItem={id:1, marca:marca, modelo:modelo, cor:cor, ano:ano, motor:motor, estoque:estoque, preço:preço}
+    const newList=list.concat(newItem)
+    setList(newList) 
   }
+
+  const oldList=[
+    {marca: "CHEVROLET",
+    modelo: "CORVETTE",
+    cor: "VERMELHO",
+    ano: 2021,
+    motor: "V8 LT6 5-5I",
+    estoque: 2,
+    preço: "R$ 9.999,99"
+  }
+  ];
+
+  const[list, setList]=useState(oldList)
+
+  const renderList = list.map((item,index)=>(
+    <li key={index}>
+      <div className='card-container'>
+        <h3>
+          <strong className='card-title'>Marca</strong>: {item.marca}
+        </h3>
+        <h3>
+          <strong className='card-title'>Modelo</strong>: {item.modelo}
+        </h3>
+        <h3>
+          <strong className='card-title'>Cor</strong>: {item.cor}
+        </h3>
+        <h3>
+          <strong className='card-title'>Ano</strong>: {item.ano}
+        </h3>
+        <h3>
+          <strong className='card-title'>Motor</strong>: {item.motor}
+        </h3>
+        <h3>
+          <strong className='card-title'>Estoque</strong>: {item.estoque}
+        </h3>
+        <h3>
+          <strong className='card-title'>Preço</strong>: {item.preço}
+        </h3>
+      </div>
+      
+    </li>
+    ));
 
   return (
     <div id="Wrapper">
@@ -41,17 +85,17 @@ function App() {
 
       <div class="main">
       
-        <input class="inputVeiculos" type="text" placeholder='Marca' ref={carroInfoRef}/>
-        <input class="inputVeiculos" type="text" placeholder='Modelo'/>
-        <input class="inputVeiculos" type="text" placeholder='Cor'/>
-        <input class="inputVeiculos" type="text" placeholder='Ano de Fabricaçao'/>
-        <input class="inputVeiculos" type="text" placeholder='Motor'/>
-        <input class="inputVeiculos" type="text" placeholder='Estoque'/>
-        <input class="inputVeiculos" type="text" placeholder='Preço'/>
+        <input class="inputVeiculos" type="text" placeholder='Marca' onChange={(e)=>setMarca(e.currentTarget.value)}/>
+        <input class="inputVeiculos" type="text" placeholder='Modelo' onChange={(e)=>setModelo(e.currentTarget.value)}/>
+        <input class="inputVeiculos" type="text" placeholder='Cor' onChange={(e)=>setCor(e.currentTarget.value)}/>
+        <input class="inputVeiculos" type="text" placeholder='Ano de Fabricaçao' onChange={(e)=>setAno(e.currentTarget.value)}/>
+        <input class="inputVeiculos" type="text" placeholder='Motor' onChange={(e)=>setMotor(e.currentTarget.value)}/>
+        <input class="inputVeiculos" type="text" placeholder='Estoque' onChange={(e)=>setEstoque(e.currentTarget.value)}/>
+        <input class="inputVeiculos" type="text" placeholder='Preço' onChange={(e)=>setPreço(e.currentTarget.value)}/>
 
         <button onClick={handleAddCarro}> Adicionar Veículo</button>
 
-        <ListaCarros carro={carro}/>
+        
       </div>  
 
       <div class="footer">
