@@ -1,6 +1,5 @@
 import React,{useState} from  'react';
 import Card from '../../Components/Carro/Carro';
-
 import './style.css';
 
 export default function ListaCarros(){

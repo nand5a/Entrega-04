@@ -8,8 +8,16 @@ import ListaCarros from './Components/ListaCarros/ListaCarros.js';
 export default function App() {
 
   return (
+
+    /*A ideia final do projeto é que o usuário possa navegar entre várias páginas
+    de acordo com os botões presentes na header que funcionaria como um menu
+    porém o processo de navegação entre elas ainda não foi feito então todas se encontram
+    em uma página só */
+
+    /* div geral que engloba todo o conteúdo */
     <div id="Wrapper">
 
+    {/* div que contém a header do site*/}
       <div id = "header">
 
         <div class="logo">
@@ -29,14 +37,18 @@ export default function App() {
             
       </div>   
 
+      {/* seria a página renderizada inicialmente e ao clicar no botão "Início" da header */}
       <div class="promoção">
         <img class="foto" src={flyer} alt="imagem" height={700}/>
       </div> 
 
+      {/* seria a página renderizada ao clicar no botão "Veículos" da header a a parte de "Adicionar Veículo"
+      só poderia ser visualizada e acessada caso o usuário entrasse com um login de "gerenciador" */}
       <div class="lista">
         <ListaCarros/>
       </div> 
 
+      {/* seria a página renderizada ao clicar no botão "Serviços" da header*/}
       <div class="outrosServiços">
 
         <h1 class="título">NOSSOS SERVIÇOS</h1>
@@ -53,6 +65,7 @@ export default function App() {
         
       </div>
 
+      {/* footer da página */}
       <div class="footer">
         <div class="bloco sobre">
           <h1 class="titulo">Sobre nós</h1>
