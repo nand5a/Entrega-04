@@ -37,7 +37,8 @@ export default function App() {
             
       </div>   
 
-      {/* seria a página renderizada inicialmente e ao clicar no botão "Início" da header */}
+      {/* seria a página renderizada inicialmente e ao clicar no botão "Início" da header
+      nela o cliente poderia divulgar alguma promoção ou algum carro em lançamento para chamar a atenção dos usuários */}
       <div class="promoção">
         <img class="foto" src={flyer} alt="imagem" height={700}/>
       </div> 
